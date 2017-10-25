@@ -81,11 +81,13 @@ public class SVGFeGaussianBlurElementBridge
         // 'stdDeviation' attribute - default is [0, 0]
         float[] stdDeviationXY = convertStdDeviation(filterElement, ctx);
         if (stdDeviationXY[0] < 0 || stdDeviationXY[1] < 0) {
-            throw new BridgeException(ctx, filterElement,
-                                      ERR_ATTRIBUTE_VALUE_MALFORMED,
-                                      new Object[] {SVG_STD_DEVIATION_ATTRIBUTE,
-                                                    String.valueOf( stdDeviationXY[ 0 ] ) +
-                                                    stdDeviationXY[1]});
+            stdDeviationXY[0] = 0;
+            stdDeviationXY[1] = 0;
+//            throw new BridgeException(ctx, filterElement,
+//                                      ERR_ATTRIBUTE_VALUE_MALFORMED,
+//                                      new Object[] {SVG_STD_DEVIATION_ATTRIBUTE,
+//                                                    String.valueOf( stdDeviationXY[ 0 ] ) +
+//                                                    stdDeviationXY[1]});
         }
 
         // 'in' attribute

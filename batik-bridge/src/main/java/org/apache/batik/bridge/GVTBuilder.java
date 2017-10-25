@@ -235,8 +235,9 @@ public class GVTBuilder implements SVGConstants {
                 gnBridge.buildGraphicsNode(ctx, e, errNode);
                 ex.setGraphicsNode(null);
             }
-            //ex.printStackTrace();
-            throw ex;
+            ex.printStackTrace();
+            // 若构造结点出错，则不加入该结点即可
+//            throw ex;
         }
     }
 

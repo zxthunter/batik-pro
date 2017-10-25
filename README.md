@@ -5,4 +5,6 @@ This is a machine engine on java to convert svg file to png/jpg/pdf/tiff.
 
 ### Fix Bug
 1. Can't read **filter** tag, resolve image conflict against new java version(above 1.6).
-2. Merge png of base64 error, convert BufferedImage from TYPE\_BYTE\_INDEXED to TYPE\_INT\_ARGB
+2. Merge png of base64 error, convert BufferedImage from TYPE\_BYTE\_INDEXED to TYPE\_INT\_ARGB.
+3. When **FeGaussianBlur** func's params error , set them to zero.
+4. Skip over wrong element to merge the image.
