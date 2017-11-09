@@ -196,7 +196,6 @@
               <goal>single</goal>
             </goals>
             <configuration>
-              <addMavenDescriptor>false</addMavenDescriptor>
               <appendAssemblyId>false</appendAssemblyId>
               <archive>
                 <manifest>

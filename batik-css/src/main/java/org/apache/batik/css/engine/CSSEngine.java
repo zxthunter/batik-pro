@@ -1223,7 +1223,7 @@ public abstract class CSSEngine {
             if (m == null) m = "";
             String s = Messages.formatMessage
                 ("stylesheet.syntax.error",
-                 new Object[] { uri.toString(), rules, m });
+                 new Object[] {rules, m });
             DOMException de = new DOMException(DOMException.SYNTAX_ERR, s);
             if (userAgent == null) throw de;
             userAgent.displayError(de);
