@@ -132,7 +132,7 @@ public abstract class AbstractImageIORegistryEntry
                         //Matches the code used by the former JPEGRegistryEntry, though.
                         BufferedImage bi = reader.read(imageIndex);
                         // 解决原有类型不匹配bug
-                        if (bi.getType() == BufferedImage.TYPE_BYTE_INDEXED) {
+                        if (bi.getType() != BufferedImage.TYPE_INT_ARGB) {
                             BufferedImage newSrc = new BufferedImage(bi.getWidth(), bi.getHeight(), BufferedImage.TYPE_INT_ARGB);
                             newSrc.getGraphics().drawImage(bi, 0, 0, null);
                             bi.flush();

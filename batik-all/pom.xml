@@ -24,7 +24,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>batik-all</artifactId>
+  <artifactId>batik-all-pro</artifactId>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>Batik aggregate artifact</description>
   <packaging>pom</packaging>
